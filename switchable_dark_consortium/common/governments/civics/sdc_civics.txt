@@ -1,0 +1,29 @@
+civic_dark_consortium = {
+	playable = { has_astral_planes_dlc = yes }
+	ai_playable = { has_astral_planes_dlc = yes }
+	description = "civic_dark_consortium_effects"
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = { value = auth_corporate }
+		}
+		civics = {
+			NOT = { value = civic_corporate_dark_consortium }
+		}
+	}
+	modifier = {
+		give_technology = tech_mine_dark_matter
+	}
+	alternate_civic_version = civic_corporate_dark_consortium
+
+	random_weight = {
+		base = @civic_rare_random_weight
+	}
+	ai_weight = {
+		base = @civic_rare_random_weight
+	}
+}
