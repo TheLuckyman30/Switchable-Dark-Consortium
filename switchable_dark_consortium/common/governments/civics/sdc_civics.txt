@@ -15,11 +15,33 @@ civic_dark_consortium = {
 			NOT = { value = civic_corporate_dark_consortium }
 		}
 	}
-	modifier = {
-		give_technology = tech_mine_dark_matter
-	}
 	alternate_civic_version = civic_corporate_dark_consortium
+	random_weight = {
+		base = @civic_rare_random_weight
+	}
+	ai_weight = {
+		base = @civic_rare_random_weight
+	}
+}
 
+civic_corporate_dark_consortium = {
+	playable = { has_astral_planes_dlc = yes }
+	ai_playable = { has_astral_planes_dlc = yes }
+	description = "civic_corporate_dark_consortium_effects"
+	potential = {
+		OR = {
+			authority = {
+				value = auth_corporate
+			}
+			civics = {
+				value = civic_galactic_sovereign_megacorp
+			}
+		}
+		civics = {
+			NOT = { value = civic_dark_consortium }
+		}
+	}
+	alternate_civic_version = civic_dark_consortium
 	random_weight = {
 		base = @civic_rare_random_weight
 	}
