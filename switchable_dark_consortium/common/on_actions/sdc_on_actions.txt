@@ -1,0 +1,5 @@
+on_post_government_changed = {
+	events = {
+		astral_planes.2205
+	}
+}
